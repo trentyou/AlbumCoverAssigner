@@ -31,7 +31,7 @@ This script currently requires several external APIs:
 [open-uri](http://ruby-doc.org/stdlib-1.9.3/libdoc/open-uri/rdoc/OpenURI.html)
     
     
-    Used to download images from the links provided by web services and included in Ruby
+    Used to download images from the links provided by web services and already included in Ruby
     
     require 'open-uri'
 
@@ -44,7 +44,7 @@ Lots.
 Currently, the last.fm database works fine, but requires an Album Name and Artist Name in order to access the 'mega' (600 x 600) images that I would like for my MP3s. This is not a great solution as many of my songs are missing either the Album Name or Artist Name. Searching by Artist Name and Song Name often has a better chance of success, but for some reason these searches only produce tiny album cover links (300 x 300) on last.fm. Trying to find the album name from the metadata found from a Artist Name and Song Name search sometimes provides weird albums (many of my songs are Electronic Dance Music and there are many rereleases on albums such as 'Top 40 Hit Albums' that it often does not give me the original album). 
 Finally, some of my songs only have a Song Name, which is even more difficult to search databases with. 
 
-Currently, I am trying to use other libraries to fill in the gaps that last.fm cannot find. Right now I am working with the rdio API to hopefully find a better solution to these problems. My hope is for this script in the future to query several databases until it find a suitable album cover for the MP3. One issue to remember are the different restrictions on the number of calls to the databases per second and per day. I would need to implement code that slows the calls to be within these guidelines. Also, databases that place restrictions on the number of calls per day would not be ideal for my script.
+Currently, I am trying to use other libraries to fill in the gaps that last.fm cannot find. Right now I am working with the Rdio API to hopefully find a better solution to these problems. My hope is for this script in the future to query several databases until it find a suitable album cover for the MP3. One issue to remember are the different restrictions on the number of calls to the databases per second and per day. I would need to implement code that slows the calls to be within these guidelines. Also, databases that place restrictions on the number of calls per day would not be ideal for my script.
 
 Another idea is to use the file name to find Album Names or Song Names, as some songs tend to put this information into the file name itself. 
 
